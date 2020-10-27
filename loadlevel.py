@@ -216,7 +216,7 @@ class loadLevel:
             self.__maxwidth = 0
             self.__x = 0
             self.__y = 0
-            self.__f = file(self.lvlFile,'r')
+            self.__f = open(self.lvlFile,'r')
             
             # Read as long as we reach the Level:
             while self.lvlNum != 0:
@@ -286,7 +286,7 @@ class loadLevel:
         # Fill Array if he had spaces:
         for self.__yf in range(self.__y):
             for self.__xf in range(self.__maxwidth):
-                if self.level.has_key((self.__xf, self.__yf)) == False:
+                if not (self.__xf, self.__yf) in self.level:
                     self.level[self.__xf, self.__yf] = 0
 
 

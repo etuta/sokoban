@@ -68,13 +68,13 @@ def main():
     lev = ll.loadLevel()
     lev.setScreen(screen)
     lev.setVals([
-      [' ',gradir + "bottom.png",0],
-      ['#',gradir + "block.png",1],
-      ['@',gradir + "player.png",2],
-      ['$',gradir + "box.png",3],
-      ['.',gradir + "place.png",4],
-      ['*',gradir + "box_over_place.png",5],
-      ['+',gradir + "player_over_place.png",6]
+      [' ',gradir + "bottom.bmp",0],
+      ['#',gradir + "block.bmp",1],
+      ['@',gradir + "player.bmp",2],
+      ['$',gradir + "box.bmp",3],
+      ['.',gradir + "place.bmp",4],
+      ['*',gradir + "box_over_place.bmp",5],
+      ['+',gradir + "player_over_place.bmp",6]
     ])
     lev.setCalc(list(ini.size))
     lev.setSym(True)
@@ -86,18 +86,18 @@ def main():
         tada.set_volume(0.5)
 
     # Load all Images
-    tm = pygame.image.load(gradir + "titlescreen.png").convert()
+    tm = pygame.image.load(gradir + "titlescreen.bmp").convert()
     tm = pygame.transform.scale(tm, ini.size)
     tmrect = tm.get_rect()
-    hud = pygame.image.load(gradir + "hud.png").convert()
+    hud = pygame.image.load(gradir + "hud.bmp").convert()
     hud = pygame.transform.scale(hud, [ini.width - ini.height, ini.height])
     hudrect = hud.get_rect()
     hudrect = hudrect.move(ini.width - (ini.width - ini.height), 0)
     font = setDefaultFont()
-    back = pygame.image.load(gradir + "background.png").convert()
+    back = pygame.image.load(gradir + "background.bmp").convert()
     back = pygame.transform.scale(back, [ini.width, ini.height])
     backrect = back.get_rect()
-    setwin = pygame.image.load(gradir + "setwinner.png").convert()
+    setwin = pygame.image.load(gradir + "setwinner.bmp").convert()
     setwin = pygame.transform.scale(setwin, [ini.width, ini.height])
     setwinrect = setwin.get_rect()
 
