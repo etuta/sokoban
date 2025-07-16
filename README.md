@@ -1,20 +1,55 @@
-# sokoban
+ngs.py`
 
-This is my version of the Sokoban game, a game that was originally created in 1981 by Hiroyuki Imabayashi. In this game, you need to push the boxes around
-in a warehouse, trying to get them to their storage locations, marked with X's in my version. The player is confined to the board and may move horizontally or 
-vertically onto empty squares. The player can move a box by sitting next to it and pushing it towards the square beyond, but cannot move boxes by pulling them. 
-The number of boxes equals the number of storage locations and the puzzle is solved when all boxes are placed at storage locations. 
+## Assets
+- **Graphics:** `graphics/skins/standard/` (BMP and PNG files)
+- **Sounds:** `sounds/tada.wav` (win notification)
+- **Levelsets:** `levelsets/` (many levels included)
 
-Getting started:
+## Credits
+- Levelsets by David W. Skinner (http://users.bentonrea.com/~sasquatch/)
+- Thanks to the Python, Pygame, and SDL communities
+- Special thanks to all players and testers!
+- 
+# Sokoban
 
-1. You will need Python3 and pygame.
-   You can install Python [here](https://www.python.org/downloads/). Similarly, you can follow [this](https://realpython.com/installing-python/) guide.
-   In order to get pygame, follow the directions on [this](https://www.pygame.org/wiki/GettingStarted) page.
+This is a Python implementation of the classic Sokoban game, originally created in 1981 by Hiroyuki Imabayashi. In Sokoban, you push boxes around a warehouse, trying to get them to their storage locations (marked with X's). You can only push boxes (not pull), and the puzzle is solved when all boxes are on storage locations.
 
-2. Clone my repository using the command:
+## Features
+- Classic Sokoban gameplay with intuitive controls
+- Multiple levelsets included: "Microban I-III" (easier) and "Sasquatch I-VIII" (harder)
+- Save and load your progress per levelset
+- Undo, reset, and cheat options (if enabled in settings)
+- Step counter and level display
+- Sound support (toggle in settings)
+- Customizable graphics via skins (default: "standard")
+- Menu navigation and in-game controls via keyboard
 
-   ```git clone https://github.com/etuta/sokoban.git```
+## Getting Started
 
-3. To start the game, inside the sokoban directory, run the command: 
+1. **Install Python 3 and pygame**
+   - Download Python: https://www.python.org/downloads/
+   - Install pygame: `pip install pygame`
 
-   ```python3 startme.py```
+2. **Clone the repository**
+   ```sh
+   git clone https://github.com/etuta/sokoban.git
+   cd sokoban
+   ```
+
+3. **Run the game**
+   ```sh
+   python3 startme.py
+   ```
+
+## Controls
+- Arrow keys: Move player
+- `u`: Undo move
+- `s`: Save level progress
+- `l`: Load saved progress
+- `r`: Reset level
+- `ESC`: Quit game
+- `c`: Cheat (skip level, if enabled in settings)
+
+## Configuration
+- All settings are in `settings.py` (resolution, fullscreen, sound, skin, framerate, etc.)
+- No command-line arguments; all configuration is via `setti
